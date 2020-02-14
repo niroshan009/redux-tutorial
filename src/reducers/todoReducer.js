@@ -6,7 +6,6 @@ function todo(state = [], action) {
       return [
         ...state,
         {
-          id: 1,
           completed: false,
           text: action.text
         }
