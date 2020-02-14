@@ -1,11 +1,9 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import { createStore } from "redux";
 import TodoPage from "./components/TodoPage";
 import { Provider } from "react-redux";
 import reducers from "./reducers/todoReducer";
-import { addTodo } from "./actions/actions";
 
 const store = createStore(
   reducers,
