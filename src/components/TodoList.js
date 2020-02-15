@@ -2,11 +2,11 @@ import React from "react";
 import TodoItem from "./TodoItem";
 import { connect } from "react-redux";
 const TodoList = ({ todos }) => (
-  <li>
+  <div>
     {todos.map(todo => (
       <TodoItem key={todo.text} text={todo.text} />
     ))}
-  </li>
+  </div>
 );
 
 const mapStateToProps = state => ({
