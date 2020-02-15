@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import { createStore } from "redux";
 import TodoPage from "./components/TodoPage";
+import TodoList from "./components/TodoList";
 import { Provider } from "react-redux";
 import reducers from "./reducers/todoReducer";
 
@@ -15,6 +16,7 @@ function App() {
     <Provider store={store}>
       <div className="App">
         <TodoPage />
+        <TodoList />
       </div>
     </Provider>
   );
