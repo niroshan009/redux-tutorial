@@ -10,7 +10,7 @@ const TodoList = ({ todos }) => (
 );
 
 const mapStateToProps = state => ({
-  todos: state
+  todos: state.todo
 });
 
 export default connect(mapStateToProps)(TodoList);
