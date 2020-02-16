@@ -9,12 +9,16 @@ let TodoPage = ({ dispatch }) => {
     event.preventDefault();
     dispatch(addTodo(todoText));
   }
+
   function handleChange(event) {
     setTodoText(event.target.value);
   }
   return (
     <div>
-      <AddTodo hanldeSubmit={handleSubmit} handleChange={handleChange} />
+      <div>
+        <AddTodo hanldeSubmit={handleSubmit} handleChange={handleChange} />
+      </div>
+      <div></div>
     </div>
   );
 };

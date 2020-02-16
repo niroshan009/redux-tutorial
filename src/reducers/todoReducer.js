@@ -1,4 +1,5 @@
 import { ADD_TODO } from "../actions/actions";
+import { combineReducers } from "redux";
 
 function todo(state = [], action) {
   switch (action.type) {
@@ -15,4 +16,7 @@ function todo(state = [], action) {
   }
 }
 
-export default todo;
+const todoApp = combineReducers({
+  todo
+});
+export default todoApp;
