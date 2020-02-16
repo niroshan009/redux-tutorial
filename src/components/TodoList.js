@@ -3,8 +3,8 @@ import TodoItem from "./TodoItem";
 import { connect } from "react-redux";
 const TodoList = ({ todos }) => (
   <div>
-    {todos.map(todo => (
-      <TodoItem key={todo.text} text={todo.text} />
+    {todos.map((todo, index) => (
+      <TodoItem key={index} text={todo.text} />
     ))}
   </div>
 );
