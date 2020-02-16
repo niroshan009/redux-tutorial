@@ -1,4 +1,4 @@
-import { ADD_TODO } from "../actions/actions";
+import { ADD_TODO, TOGGLE_TODO } from "../actions/actions";
 import { combineReducers } from "redux";
 
 function todo(state = [], action) {
@@ -11,6 +11,13 @@ function todo(state = [], action) {
           text: action.text
         }
       ];
+    case TOGGLE_TODO:
+      console.log("===========");
+      return state.todo.map((todoItem, index) =>
+        action.id === index
+          ? { ...todoItem, completed: !todoItem.completed }
+          : todoItem
+      );
     default:
       return state;
   }
