@@ -2,6 +2,7 @@ import React from "react";
 import { toggleTodo } from "../actions/actions";
 import TodoItem from "./TodoItem";
 import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
 const TodoList = ({ todos }) => (
   <div>
     {todos.map((todo, index) => (
@@ -9,7 +10,10 @@ const TodoList = ({ todos }) => (
         key={index}
         text={todo.text}
         completed={todo.completed}
-        onclick={() => toggleTodo(index)}
+        onClick={() => {
+          console.log("-----");
+          toggleTodo(0);
+        }}
       />
     ))}
   </div>
@@ -20,7 +24,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  toogleTodo: id => dispatch(toggleTodo(id))
+  toggleTodo: id => dispatch(toggleTodo(id))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(TodoList);

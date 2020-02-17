@@ -1,8 +1,8 @@
 import React from "react";
 
-const TodoItem = ({ onclick, text, completed }) => (
+const TodoItem = ({ text, completed, onClick }) => (
   <h4
-    onClick={onclick}
+    onClick={onClick(0)}
     style={{ textDecoration: completed ? "line-through" : "none" }}
   >
     {text}
