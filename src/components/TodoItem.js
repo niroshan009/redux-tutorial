@@ -1,11 +1,13 @@
 import React from "react";
 
-const TodoItem = ({ text, completed, onClick }) => (
-  <h4
-    onClick={onClick(0)}
-    style={{ textDecoration: completed ? "line-through" : "none" }}
-  >
-    {text}
-  </h4>
-);
+function TodoItem(props) {
+  return (
+    <h4
+      onClick={props.onClick}
+      style={{ textDecoration: props.completed ? "line-through" : "none" }}
+    >
+      {props.text}
+    </h4>
+  );
+}
 export default TodoItem;

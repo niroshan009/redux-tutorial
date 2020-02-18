@@ -12,12 +12,12 @@ function todo(state = [], action) {
         }
       ];
     case TOGGLE_TODO:
-      console.log("===========");
-      return state.todo.map((todoItem, index) =>
-        action.id === index
-          ? { ...todoItem, completed: !todoItem.completed }
-          : todoItem
-      );
+      return state.map((todo, index) => {
+        if (index === action.id) {
+          return { ...todo, completed: !todo.completed };
+        }
+        return todo;
+      });
     default:
       return state;
   }
