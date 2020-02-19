@@ -15,7 +15,7 @@ let TodoPage = ({ dispatch }) => {
   }
   return (
     <div>
-      <div>
+      <div align="left">
         <AddTodo hanldeSubmit={handleSubmit} handleChange={handleChange} />
       </div>
       <div></div>
