@@ -11,7 +11,6 @@ function TodoList(props) {
           key={index}
           text={todo.text}
           completed={todo.completed}
-          index={index}
           onClick={() => props.toggleTodo(index)}
         />
       ))}
